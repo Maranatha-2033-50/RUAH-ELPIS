@@ -1,0 +1,167 @@
+{
+  "nav": {
+    "about": "About",
+    "programs": "Programs",
+    "mission": "Mission",
+    "contact": "Contact",
+    "cta": "Get Involved"
+  },
+  "hero": {
+    "eyebrow": "Hope & Love",
+    "titleLine1": "Breathing Life,",
+    "titleLine2": "Inspiring Hope.",
+    "titleEn": "숨을 불어넣다, 내일을 기대하다.",
+    "subtitle": "RUAH ELPIS is a Christian non-profit foundation dedicated to improving health and welfare for the medically vulnerable through health education and community sports programs.",
+    "ctaPrimary": "Our Programs",
+    "ctaSecondary": "About Us",
+    "scroll": "Scroll"
+  },
+  "mission": {
+    "eyebrow": "Our Mission",
+    "title": "Standing beside the marginalized,",
+    "titleEm": "building a healthier life together",
+    "desc": "RUAH ELPIS supports health and independence for women, minorities, the elderly, and children from broken homes through medical education and community sport programs.",
+    "cards": [
+      {
+        "title": "RUAH · Breath / Life",
+        "desc": "We build the foundation for self-reliance by cultivating health literacy so people can care for themselves and their families."
+      },
+      {
+        "title": "ELPIS · Hope / Expectation",
+        "desc": "Beyond physical health, we restore positive expectations for tomorrow through mental wellness care."
+      },
+      {
+        "title": "COMMUNITY · Solidarity / Love",
+        "desc": "Through sports programs, we help the marginalized form peer groups and engage healthily with society."
+      }
+    ]
+  },
+  "programs": {
+    "eyebrow": "Programs",
+    "title": "What We Do",
+    "items": [
+      {
+        "num": "01",
+        "title": "Health Literacy Education",
+        "tag": "Self-Care Academy",
+        "desc": "We provide basic health knowledge, preventive medicine, and healthy lifestyle education to medically underserved communities."
+      },
+      {
+        "num": "02",
+        "title": "Active Community Sports",
+        "tag": "Active Community",
+        "desc": "Peer-group sports programs promote physical health while building social connections and mental wellness through community engagement."
+      },
+      {
+        "num": "03",
+        "title": "Integrated Welfare Safety Net",
+        "tag": "Safety Net",
+        "desc": "Tailored welfare programs for women, the elderly, and children from broken homes, placing individual dignity and recovery at the center."
+      },
+      {
+        "num": "04",
+        "title": "Mind & Breath Counseling",
+        "tag": "Mind Care",
+        "desc": "We alleviate isolation and support emotional stability through community relationship building, counseling referrals, and small group activities."
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "About Us",
+    "title": "The story",
+    "titleEm": "within our name",
+    "body1": "RUAH is a Hebrew word meaning \"spirit\", \"wind\", and \"breath\". ELPIS is a Greek word for \"hope\" and \"expectation\".",
+    "body2": "Like the union of these two words, we seek to share the breath of life and hope with our marginalized neighbors — creating real change through health education and community programs.",
+    "stat1Num": "4+",
+    "stat1Label": "Core Programs",
+    "stat2Num": "∞",
+    "stat2Label": "Hope & Love"
+  },
+  "contact": {
+    "eyebrow": "Get Involved",
+    "title": "Want to join us?",
+    "subtitle": "We welcome donations, volunteers, and partnership inquiries.",
+    "labelName": "Name",
+    "placeholderName": "Jane Doe",
+    "labelEmail": "Email",
+    "placeholderEmail": "hello@example.com",
+    "labelSubject": "Inquiry Type",
+    "subjectOptions": ["Volunteer", "Donation", "Partnership", "Other"],
+    "labelMessage": "Message",
+    "placeholderMessage": "Please enter your message",
+    "submit": "Send Message",
+    "errors": {
+      "name": "Please enter your name.",
+      "email": "Please enter a valid email address.",
+      "subject": "Please select an inquiry type.",
+      "message": "Please enter a message."
+    },
+    "successTitle": "Message Sent",
+    "successBody": "Thank you for reaching out. Our team will get back to you as soon as possible.",
+    "successClose": "Close"
+  },
+  "actionTiers": {
+    "eyebrow": "Transparency & Action",
+    "title": "Your Care,\nReal Change.",
+    "desc": "RUAH ELPIS publishes full transparency on how every contribution is used. Choose how you want to participate.",
+    "tabMonthly": "Monthly",
+    "tabOneoff": "One-off",
+    "tiers": {
+      "monthly": [
+        {
+          "tier": "TIER 1",
+          "amount": "₩10K / mo",
+          "label": "Health Self-Care",
+          "value": "Monthly support to produce health materials and provide one child with a sustainable self-care hygiene kit every month."
+        },
+        {
+          "tier": "TIER 2",
+          "amount": "₩30K / mo",
+          "label": "Mind Care",
+          "value": "Monthly matching of one marginalized youth with a professional mentoring program at the Mind & Breath Counseling Center."
+        },
+        {
+          "tier": "TIER 3",
+          "amount": "₩50K / mo",
+          "label": "Sports Community",
+          "value": "Monthly funding of regular training sessions and sports welfare infrastructure for one children's football team."
+        }
+      ],
+      "oneoff": [
+        {
+          "tier": "TIER 1",
+          "amount": "One-off",
+          "label": "Health Field",
+          "value": "A one-time contribution delivers a special hygiene package to one health education class in an underserved village in Patna, India."
+        },
+        {
+          "tier": "TIER 2",
+          "amount": "One-off",
+          "label": "Emergency Care",
+          "value": "A one-time contribution provides a 4-session intensive mind healing solution for a youth in urgent emotional distress."
+        },
+        {
+          "tier": "TIER 3",
+          "amount": "One-off",
+          "label": "Community Fest",
+          "value": "A one-time contribution funds an integrated community sports friendship tournament and provides full equipment for all participants."
+        }
+      ]
+    },
+    "cta": "Join Us Now"
+  },
+  "impactMetrics": {
+    "eyebrow": "Our Impact",
+    "title": "RUAH ELPIS\nBy the Numbers",
+    "metrics": [
+      { "num": "4+",   "label": "Core Programs",       "sub": "Health · Welfare · Sports · Care" },
+      { "num": "500+", "label": "Families Supported",  "sub": "Target beneficiaries for 2026" },
+      { "num": "12+",  "label": "Partner Organizations","sub": "Domestic & global network" },
+      { "num": "100%", "label": "Full Transparency",   "sub": "All contributions publicly disclosed" }
+    ]
+  },
+  "footer": {
+    "tagline": "Hope & Love",
+    "copy": "© 2026 RUAH ELPIS Foundation. All rights reserved."
+  }
+}

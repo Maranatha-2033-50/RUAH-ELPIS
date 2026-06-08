@@ -1,0 +1,133 @@
+.section {
+  padding: var(--space-2xl) var(--space-lg);
+  background: var(--color-ivory);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.eyebrow {
+  font-size: var(--text-caption);
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-point);
+}
+
+/* h2: 800 ExtraBold */
+.title {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.2;
+  color: var(--color-text-dark);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.item {
+  background: var(--color-white);
+  border: 1px solid var(--color-divider);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow var(--transition), transform var(--transition), border-color var(--transition);
+}
+
+.item:hover {
+  box-shadow: 0 10px 36px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
+  border-color: rgba(26, 58, 92, 0.15);
+}
+
+/* 16:9 이미지 플레이스홀더 — 스퀘어, 원형 절대 금지 */
+.imgPlaceholder {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: var(--color-ivory-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  transition: background var(--transition);
+}
+
+.item:hover .imgPlaceholder {
+  background: var(--color-point-light);
+}
+
+.imgIcon {
+  color: var(--color-point);
+  opacity: 0.5;
+  transition: opacity var(--transition), transform var(--transition);
+}
+
+.item:hover .imgIcon {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+
+.cardBody {
+  padding: 1.5rem 1.75rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  flex: 1;
+}
+
+.topRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tag {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-olive-light);
+  background: rgba(125, 114, 96, 0.08);
+  padding: 0.22rem 0.65rem;
+  border-radius: 100px;
+}
+
+.num {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--color-point);
+  opacity: 0.6;
+}
+
+/* h3: 700 */
+.itemTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.35;
+  color: var(--color-text-dark);
+}
+
+/* 본문: 400, -0.01em */
+.itemDesc {
+  font-size: var(--text-sub);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.8;
+  color: var(--color-text);
+}

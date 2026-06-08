@@ -1,0 +1,167 @@
+{
+  "nav": {
+    "about": "재단 소개",
+    "programs": "프로그램",
+    "mission": "미션",
+    "contact": "문의",
+    "cta": "함께하기"
+  },
+  "hero": {
+    "eyebrow": "Hope & Love",
+    "titleLine1": "숨을 불어넣다,",
+    "titleLine2": "내일을 기대하다.",
+    "titleEn": "Breathing Life, Inspiring Hope.",
+    "subtitle": "루아흐 엘피스는 의료 취약계층의 보건 교육과 커뮤니티 스포츠를 통해 모두가 건강한 숨을 쉬고, 내일의 희망을 꿈꾸는 세상을 만드는 기독교 비영리 재단입니다.",
+    "ctaPrimary": "프로그램 보기",
+    "ctaSecondary": "재단 소개",
+    "scroll": "Scroll"
+  },
+  "mission": {
+    "eyebrow": "Our Mission",
+    "title": "소외된 이웃 곁에서,",
+    "titleEm": "건강한 삶을 함께 만들어갑니다",
+    "desc": "RUAH ELPIS는 의료·보건 교육과 커뮤니티 스포츠 프로그램을 통해 여성, 소수자, 노약자, 결손 가정 아동 등 의료 취약계층의 건강 증진과 자립을 지원하는 기독교 비영리 재단입니다.",
+    "cards": [
+      {
+        "title": "RUAH · 숨결/생명",
+        "desc": "의료·보건 지식 배양을 통해 스스로와 가족의 건강을 지키는 자립의 토대를 마련합니다."
+      },
+      {
+        "title": "ELPIS · 희망/기대",
+        "desc": "신체적 건강을 넘어 정신적 케어를 통해 내일에 대한 긍정적인 기대를 회복합니다."
+      },
+      {
+        "title": "COMMUNITY · 연대/사랑",
+        "desc": "스포츠 프로그램을 통해 소외된 이들이 또래 그룹을 형성하고 사회와 건강하게 교류하도록 돕습니다."
+      }
+    ]
+  },
+  "programs": {
+    "eyebrow": "Programs",
+    "title": "우리가 하는 일",
+    "items": [
+      {
+        "num": "01",
+        "title": "보건 리터러시 교육",
+        "tag": "Self-Care Academy",
+        "desc": "지역 의료 취약계층을 대상으로 기초 보건 지식, 예방 의학, 건강 생활 습관 교육을 제공합니다. 잠재적 보건 역량을 키워 스스로 건강을 지킬 수 있도록 돕습니다."
+      },
+      {
+        "num": "02",
+        "title": "활력 증진 스포츠 프로그램",
+        "tag": "Active Community",
+        "desc": "또래 그룹 스포츠 프로그램을 통해 신체 건강을 증진하고, 외부 교류와 공동체 형성으로 정신 건강 및 사회적 연결을 강화합니다."
+      },
+      {
+        "num": "03",
+        "title": "통합 복지 세이프티넷",
+        "tag": "Safety Net",
+        "desc": "여성, 노약자, 결손 가정 아동 등 취약계층에 대한 맞춤형 복지 프로그램을 운영합니다. 개인의 존엄과 회복을 중심에 둡니다."
+      },
+      {
+        "num": "04",
+        "title": "마음 숨결 상담소",
+        "tag": "Mind Care",
+        "desc": "커뮤니티 내 관계 형성, 상담 연계, 소그룹 활동을 통해 고립감을 해소하고 정서적 안정을 지원합니다."
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "About Us",
+    "title": "이름 안에 담긴",
+    "titleEm": "우리의 이야기",
+    "body1": "RUAH(루아흐)는 히브리어로 \"영\", \"바람\", \"숨결\"을 뜻합니다. ELPIS(엘피스)는 헬라어로 \"희망\"과 \"기대\"를 의미합니다.",
+    "body2": "두 단어가 만나 이루는 이름처럼, 저희는 삶의 숨결과 희망을 소외된 이웃과 함께 나누고자 합니다. 의료 취약계층이 건강한 삶을 누릴 권리를 위해, 재단은 보건 교육과 커뮤니티 프로그램으로 실질적인 변화를 만들어갑니다.",
+    "stat1Num": "4+",
+    "stat1Label": "핵심 프로그램",
+    "stat2Num": "∞",
+    "stat2Label": "Hope & Love"
+  },
+  "contact": {
+    "eyebrow": "Get Involved",
+    "title": "함께하고 싶으신가요?",
+    "subtitle": "후원, 자원봉사, 협력 문의를 환영합니다.",
+    "labelName": "이름",
+    "placeholderName": "홍길동",
+    "labelEmail": "이메일",
+    "placeholderEmail": "hello@example.com",
+    "labelSubject": "문의 유형",
+    "subjectOptions": ["자원봉사", "후원", "협력 기관 문의", "기타"],
+    "labelMessage": "메시지",
+    "placeholderMessage": "문의 내용을 입력해주세요",
+    "submit": "메시지 보내기",
+    "errors": {
+      "name": "이름을 입력해주세요.",
+      "email": "올바른 이메일 주소를 입력해주세요.",
+      "subject": "문의 유형을 선택해주세요.",
+      "message": "메시지를 입력해주세요."
+    },
+    "successTitle": "메시지가 전송되었습니다",
+    "successBody": "소중한 관심에 감사드립니다. 담당자가 빠른 시일 내에 연락드리겠습니다.",
+    "successClose": "닫기"
+  },
+  "actionTiers": {
+    "eyebrow": "Transparency & Action",
+    "title": "당신의 관심이\n만드는 변화",
+    "desc": "루아흐 엘피스는 모든 기여가 어떻게 쓰이는지 투명하게 공개합니다. 참여 방식을 선택하고 변화를 직접 확인하세요.",
+    "tabMonthly": "정기 관심",
+    "tabOneoff": "일시 관심",
+    "tiers": {
+      "monthly": [
+        {
+          "tier": "TIER 1",
+          "amount": "월 1만 원",
+          "label": "보건 자립",
+          "value": "월 1만 원으로 보건 교재를 정기 제작하고 아동 1명에게 지속 가능한 자립 위생 키트를 매달 지원합니다."
+        },
+        {
+          "tier": "TIER 2",
+          "amount": "월 3만 원",
+          "label": "마음 케어",
+          "value": "월 3만 원으로 소외 청소년 1명에게 마음 숨결 상담소 전문 멘토링 프로그램을 정기 매칭합니다."
+        },
+        {
+          "tier": "TIER 3",
+          "amount": "월 5만 원",
+          "label": "스포츠 공동체",
+          "value": "월 5만 원으로 소외계층 아동 축구단 1개 팀의 정기 훈련 세션 및 스포츠 복지 환경을 구축합니다."
+        }
+      ],
+      "oneoff": [
+        {
+          "tier": "TIER 1",
+          "amount": "1회 참여",
+          "label": "보건 현장",
+          "value": "1회 참여로 인도 파트나 소외지역 마을 보건 교육 1개 클래스의 특별 위생 물품 패키지를 전달합니다."
+        },
+        {
+          "tier": "TIER 2",
+          "amount": "1회 참여",
+          "label": "긴급 케어",
+          "value": "1회 참여로 심리 정서적 긴급 케어가 필요한 청소년에게 4회기 단기 집중 마음 치유 솔루션을 제공합니다."
+        },
+        {
+          "tier": "TIER 3",
+          "amount": "1회 참여",
+          "label": "연대 축제",
+          "value": "1회 참여로 지역사회 연대를 위한 통합 커뮤니티 스포츠 친선 대회 개최 및 맞춤형 장비를 전원 보급합니다."
+        }
+      ]
+    },
+    "cta": "지금 함께하기"
+  },
+  "impactMetrics": {
+    "eyebrow": "Our Impact",
+    "title": "숫자로 보는\n루아흐 엘피스",
+    "metrics": [
+      { "num": "4+",   "label": "핵심 프로그램",   "sub": "의료·보건·스포츠·케어" },
+      { "num": "500+", "label": "지원 가정",        "sub": "2026년 목표 수혜 가정" },
+      { "num": "12+",  "label": "파트너 기관",      "sub": "국내외 협력 네트워크" },
+      { "num": "100%", "label": "투명한 운영",      "sub": "기여금 사용 전액 공개" }
+    ]
+  },
+  "footer": {
+    "tagline": "Hope & Love",
+    "copy": "© 2026 RUAH ELPIS Foundation. All rights reserved."
+  }
+}

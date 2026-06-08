@@ -1,0 +1,155 @@
+.wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: var(--space-2xl) 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* 상단 레이블 */
+.label {
+  text-align: center;
+  font-size: var(--text-caption);
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-olive-light);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+/* ── 카드 기본 상태 ── */
+.card {
+  background: var(--color-white);
+  border: 1.5px solid var(--color-divider);
+  border-radius: var(--radius-md);
+  padding: 2rem 1.5rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  text-align: left;
+  cursor: default;
+  transition:
+    background var(--transition),
+    border-color var(--transition),
+    box-shadow var(--transition),
+    transform var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+/* 좌측 포인트 바 */
+.card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--accent, var(--color-point));
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.3s ease;
+}
+
+/* ── 호버·포커스 활성 상태 ── */
+.card.active,
+.card:hover {
+  background: var(--color-point-light);
+  border-color: rgba(0, 0, 0, 0.12);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
+}
+
+.card.active::before,
+.card:hover::before {
+  transform: scaleY(1);
+}
+
+/* ── 키워드: RE + suffix ── */
+.keyword {
+  display: flex;
+  align-items: baseline;
+  gap: 0;
+  line-height: 1;
+}
+
+/* RE: 포인트 컬러 + 굵게 */
+.re {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--accent, var(--color-point));
+  letter-spacing: -0.02em;
+  transition: color var(--transition);
+}
+
+/* suffix: 기본 상태에서 흐리게, 호버 시 진하게 */
+.suffix {
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: var(--color-olive-light);
+  letter-spacing: -0.01em;
+  transition: color var(--transition), font-weight var(--transition);
+}
+
+.card.active .suffix,
+.card:hover .suffix {
+  color: var(--color-text-dark);
+  font-weight: 600;
+}
+
+/* ── 태그 ── */
+.tag {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent, var(--color-point));
+  background: rgba(26, 58, 92, 0.08);
+  padding: 0.22rem 0.6rem;
+  border-radius: 100px;
+  width: fit-content;
+}
+
+/* ── 설명: 기본 숨김, 호버 시 슬라이드 노출 ── */
+.desc {
+  font-size: var(--text-sub);
+  font-weight: 400;
+  color: var(--color-text);
+  line-height: 1.85;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.35s ease, opacity 0.3s ease;
+}
+
+.card.active .desc,
+.card:hover .desc {
+  max-height: 120px;
+  opacity: 1;
+}
+
+/* ── 태블릿 ── */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .desc {
+    max-height: none;
+    opacity: 1;
+  }
+}
+
+/* ── 모바일 ── */
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

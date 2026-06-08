@@ -1,0 +1,214 @@
+.section {
+  padding: var(--space-2xl) var(--space-lg);
+  background: var(--color-grey-bg);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.eyebrow {
+  font-size: var(--text-caption);
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-point);
+}
+
+/* 섹션 제목: 2.5rem / 700 */
+.title {
+  font-size: clamp(1.8rem, 4vw, var(--text-section-title));
+  font-weight: 700;
+  color: var(--color-text-dark);
+  letter-spacing: -0.02em;
+}
+
+/* 서브: 0.875rem / 400 */
+.subtitle {
+  font-size: var(--text-sub);
+  font-weight: 400;
+  color: var(--color-olive-light);
+}
+
+.form {
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+/* label: 캡션 */
+.field label {
+  font-size: var(--text-caption);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-olive-dark);
+}
+
+.field input,
+.field select,
+.field textarea {
+  background: #ffffff;
+  border: 1.5px solid rgba(125, 114, 96, 0.22);
+  border-radius: var(--radius-sm);
+  padding: 0.8rem 1rem;
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  font-weight: 400;
+  color: var(--color-text-dark);
+  transition: border-color var(--transition), box-shadow var(--transition);
+  outline: none;
+  width: 100%;
+  resize: vertical;
+  appearance: none;
+  line-height: 1.6;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: var(--color-olive-light);
+  font-weight: 300;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: var(--color-point);
+  box-shadow: 0 0 0 3px rgba(26, 58, 92, 0.08);
+}
+
+.inputError {
+  border-color: var(--color-error) !important;
+  box-shadow: 0 0 0 3px rgba(184, 92, 92, 0.08) !important;
+}
+
+/* 에러 메시지: 캡션 */
+.errorMsg {
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: var(--color-error);
+}
+
+/* 포인트 네이비 버튼 */
+.submit {
+  align-self: center;
+  font-family: var(--font-sans);
+  font-size: var(--text-sub);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  padding: 0.9rem 2.8rem;
+  background: var(--color-point);
+  color: var(--color-point-text);
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+.submit:hover {
+  background: var(--color-point-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(26, 58, 92, 0.2);
+}
+
+/* ── 성공 모달 ── */
+.modalBackdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(26, 26, 26, 0.5);
+  backdrop-filter: blur(6px);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.25s ease;
+}
+
+.modal {
+  background: var(--color-ivory-light);
+  border-radius: var(--radius-lg);
+  padding: 3rem 2.5rem;
+  max-width: 420px;
+  width: 90%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.1rem;
+  box-shadow: 0 24px 80px rgba(26, 26, 26, 0.2);
+  animation: slideUp 0.3s ease;
+}
+
+.modalIcon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(26, 58, 92, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-point);
+}
+
+/* 강조: 1.5rem / 600 */
+.modalTitle {
+  font-size: var(--text-emphasis);
+  font-weight: 600;
+  color: var(--color-text-dark);
+}
+
+.modalBody {
+  font-size: var(--text-sub);
+  font-weight: 400;
+  color: var(--color-text);
+  line-height: 1.85;
+}
+
+.modalClose {
+  margin-top: 0.5rem;
+  font-family: var(--font-sans);
+  font-size: var(--text-sub);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  padding: 0.75rem 2.2rem;
+  background: var(--color-point);
+  color: var(--color-point-text);
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background var(--transition);
+}
+
+.modalClose:hover { background: var(--color-point-hover); }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+@media (max-width: 480px) {
+  .row { grid-template-columns: 1fr; }
+}

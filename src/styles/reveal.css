@@ -1,0 +1,25 @@
+/* ── smoothReveal: GSAP SplitText의 CSS 구현체 ── */
+@keyframes smoothReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 초기 상태: 숨김 */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(20px);
+  will-change: opacity, transform;
+}
+
+/* IntersectionObserver가 .revealed 추가 → 애니메이션 실행 */
+[data-reveal].revealed {
+  animation: smoothReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* stagger: transitionDelay는 JS에서 주입 (useScrollReveal hook) */

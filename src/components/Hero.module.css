@@ -1,0 +1,183 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  background: var(--color-ivory);
+  overflow: hidden;
+  gap: 0;
+}
+
+/* 좌측: 텍스트 */
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  padding: 9rem 4rem 5rem 2rem;
+  max-width: 640px;
+  margin-left: auto;
+}
+
+.eyebrow {
+  font-size: var(--text-caption);
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-point);
+  background: var(--color-point-light);
+  padding: 0.35rem 1rem;
+  border-radius: 100px;
+  display: inline-block;
+  width: fit-content;
+}
+
+/* h1: 800 ExtraBold 에디토리얼 */
+.title {
+  font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.2;
+  color: var(--color-text-dark);
+}
+
+.titleEn {
+  font-size: clamp(0.85rem, 1.4vw, 1rem);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: var(--color-olive-light);
+}
+
+.subtitle {
+  font-size: clamp(0.92rem, 1.4vw, 1rem);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.8;
+  color: var(--color-text);
+  max-width: 480px;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.btnPrimary {
+  font-size: var(--text-sub);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  padding: 0.85rem 2.2rem;
+  background: var(--color-point);
+  color: var(--color-point-text);
+  border-radius: var(--radius-sm);
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+.btnPrimary:hover {
+  background: var(--color-point-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.btnSecondary {
+  font-size: var(--text-sub);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  padding: 0.85rem 2.2rem;
+  border: 1.5px solid var(--color-divider);
+  color: var(--color-olive-dark);
+  border-radius: var(--radius-sm);
+  transition: border-color var(--transition), color var(--transition), background var(--transition);
+}
+
+.btnSecondary:hover {
+  border-color: var(--color-point);
+  color: var(--color-point);
+  background: var(--color-point-light);
+}
+
+/* 우측: 1:1 이미지 플레이스홀더 — 스퀘어, 원형 금지 */
+.imgSide {
+  height: 100%;
+  min-height: 100vh;
+  background: var(--color-ivory-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.imgPlaceholderHint {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  font-size: var(--text-caption);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-olive-light);
+  opacity: 0.6;
+}
+
+/* 스크롤 힌트 */
+.scrollHint {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 2;
+}
+
+.scrollLine {
+  display: block;
+  width: 1px;
+  height: 48px;
+  background: linear-gradient(to bottom, transparent, var(--color-olive-light));
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+
+.scrollLabel {
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-olive-light);
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.35; }
+  50%       { opacity: 1; }
+}
+
+/* ── 모바일: 단일 컬럼 ── */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .content {
+    padding: 7rem 2rem 3rem;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .imgSide {
+    min-height: 260px;
+    height: 260px;
+  }
+
+  .scrollHint { display: none; }
+}
+
+@media (max-width: 480px) {
+  .actions { flex-direction: column; }
+}

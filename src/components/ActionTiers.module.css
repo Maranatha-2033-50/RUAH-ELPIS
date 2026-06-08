@@ -1,0 +1,201 @@
+/* ── ActionTiers: The Children's Society 방식 동적 섹션 ── */
+.section {
+  padding: var(--space-2xl) var(--space-lg);
+  background: var(--color-text-dark);   /* 딥 다크: 대비 극대화 */
+}
+
+[data-theme='dark'] .section {
+  background: var(--color-ivory-dark);
+}
+
+.header {
+  max-width: 700px;
+  margin: 0 auto 3.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.eyebrow {
+  font-size: var(--text-caption);
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-point);
+}
+
+/* h2: 800 ExtraBold, -0.04em */
+.title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.2;
+  color: var(--color-ivory-light);
+  white-space: pre-line;
+}
+
+.desc {
+  font-size: var(--text-sub);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.8;
+  color: var(--color-olive-light);
+}
+
+/* ── 세그먼트 탭 ── */
+.tabWrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.tabTrack {
+  position: relative;
+  display: inline-flex;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 100px;
+  padding: 4px;
+  gap: 0;
+}
+
+.tabBtn {
+  position: relative;
+  z-index: 1;
+  padding: 0.6rem 1.8rem;
+  border: none;
+  background: none;
+  font-family: var(--font-sans);
+  font-size: var(--text-sub);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  cursor: pointer;
+  border-radius: 100px;
+  color: rgba(250, 247, 242, 0.5);
+  transition: color 0.25s ease;
+  white-space: nowrap;
+}
+
+.tabActive {
+  color: var(--color-text-dark);
+}
+
+/* 슬라이딩 인디케이터 */
+.tabIndicator {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: calc(50% - 4px);
+  height: calc(100% - 8px);
+  background: var(--color-ivory-light);
+  border-radius: 100px;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+/* ── 티어 카드 그리드 ── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  transition: background var(--transition), border-color var(--transition), transform var(--transition);
+}
+
+.card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.16);
+  transform: translateY(-3px);
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tierBadge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-point);
+  background: rgba(26, 58, 92, 0.3);
+  padding: 0.22rem 0.65rem;
+  border-radius: 100px;
+}
+
+.amount {
+  font-size: var(--text-sub);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--color-ivory-light);
+}
+
+/* 이미지 플레이스홀더: 16:9 스퀘어, 원형 절대 금지 */
+.imgBox {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: var(--color-ivory-dark);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 0.75rem 1rem;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.imgLabel {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-olive-light);
+}
+
+/* 기여 가치 텍스트 — 탭 전환 시 부드럽게 */
+.value {
+  font-size: var(--text-sub);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.8;
+  color: rgba(250, 247, 242, 0.7);
+  flex: 1;
+  animation: smoothReveal 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.cardCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: var(--text-caption);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-point);
+  transition: gap var(--transition), color var(--transition);
+  margin-top: auto;
+}
+
+.cardCta:hover {
+  gap: 0.7rem;
+  color: #5B9BD5;
+}
+
+/* ── 반응형 ── */
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr; max-width: 480px; }
+}
